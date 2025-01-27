@@ -1,5 +1,7 @@
 import argparse
 from scapy.all import sr1, IP, TCP
+import logging
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 
 def scan_ports(ip, start_port, end_port):
     open_ports = []
